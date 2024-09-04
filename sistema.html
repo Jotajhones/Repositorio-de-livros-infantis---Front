@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=3, initial-scale=1.0">
+    <title>Sistema</title>
+    <link rel="stylesheet" href="assets/style/sistema.css">
+</head>
+
+<header>
+    
+    <a href="index.html"><img src="assets/images/logos/Meu livrinho nome.png" alt="" id="imgLogo"></a>
+
+    <div id="icones">
+        <div class="divIcon" id="btnProcurar">
+            <img src="assets/images/icons/procurar.png" alt="buscar icone" id="buscarIcon">
+        </div>
+    </div>
+
+</header>
+
+<body>
+
+    <nav>
+
+        <ul>
+            <label for="radio-vizualizar">
+                <li id="vizualizar" class="menuPrincipal">
+                    <input type="checkbox" name="radio-menu" id="radio-vizualizar" class="checks">
+                    Vizualizar
+                </li>
+            </label>
+
+            <label for="radio-editar">
+                <li id="editar" class="menuPrincipal">
+                    <input type="checkbox" name="radio-menu" id="radio-editar" class="checks">
+                    Editar
+                </li>
+            </label>
+
+            <label for="radio-adicionar">
+                <li id="adicionar" class="menuPrincipal">
+                    <input type="checkbox" name="radio-menu" id="radio-adicionar" class="checks">
+                    Adicionar
+                </li>
+            </label>
+
+            <label for="radio-deletar">
+                <li id="deletar" class="menuPrincipal">
+                    <input type="checkbox" name="radio-menu" id="radio-deletar" class="checks">
+                    Deletar
+                </li>
+            </label>
+        </ul>
+
+    </nav>
+
+    <main id="conteudoPrincipal">
+
+        <h1>Sistema de verificação de conteudo</h1>
+
+        <div id="imgmain">
+            <img src="assets/images/logos/Meu livrinho logo (1).png" alt="" id="imglogo">
+        </div>
+    </main>
+
+    <aside id="formArea">
+        <h1 id="tituloForm">titulo</h1>
+
+        <div id="forms">
+            <input type="text" id="inputID" placeholder="ID">
+
+            <label for="inputNome">
+                Nome:
+                <input type="text" id="inputNome" placeholder="NOME">
+            </label>
+            <label for="inputAutor">
+                Autor:
+                <input type="text" id="inputAutor" placeholder="AUTOR">
+            </label>
+            <label for="inputEditora">
+                Editora:
+                <input type="text" id="inputEditora" placeholder="EDITORA">
+            </label>
+            <label for="inputUrl">
+                Url:
+                <input type="text" id="inputUrl" placeholder="ENDEREÇO DO LIVRO">
+            </label>
+            <label for="inputCapa">
+                Capa:
+                <input type="text" id="inputCapa" placeholder="IMAGEM DE CAPA">
+            </label>
+        </div>
+
+        <div id="botao">BOTAO</div>
+    </aside>
+
+    <footer>Meu Livrinho &copy;</footer>
+
+    <script src="assets/script/sistema.js"></script>
+</body>
+
+</html>

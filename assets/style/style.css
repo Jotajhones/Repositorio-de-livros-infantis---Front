@@ -1,0 +1,408 @@
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --cor1: #6B614A;
+    --cor2: #EBD090;
+    --cor3: #8FC8EB;
+    --cor4: #4A4A6B;
+    --cor5: #908FEB;
+    --cor6: #4A5F6B;
+    --fonte-padrao: Arial, Helvetica, sans-serif;
+    --fonte-titulo: "Concert One", sans-serif;
+}
+
+/* Cabeçalho */
+body {
+    font-family: var(--fonte-padrao);
+}
+
+header {
+    background-color: var(--cor2);
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Logo */
+
+header #logo-superior {
+    margin: 0 20px;
+}
+
+@media(max-width:860px) {
+    header #logo-superior {
+        width: 246px;
+    }
+}
+
+@media(max-width:650px) {
+    header #logo-superior {
+        display: none;
+    }
+
+    header {
+        justify-content: end;
+    }
+
+    main {
+        width: 100%;
+    }
+}
+
+/* MENU */
+
+#icones {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 5px;
+}
+
+#menu {
+    display: none;
+    list-style: none;
+    position: absolute;
+    margin-top: 50px;
+    top: 0px;
+    right: 0;
+    background-color: var(--cor2);
+    padding: 20px;
+    font-size: 2em;
+    height: fit-content;
+    width: 300px;
+    transition: 0.4s;
+    border-radius: 10px 0 0 10px;
+    cursor: default;
+}
+
+#menu a {
+    padding: 10px 0;
+    text-decoration: none;
+    color: white;
+    cursor: default;
+}
+
+#menu li {
+    width: 100%;
+    padding: 10px;
+    font: bold;
+    border-bottom: solid 2px var(--cor3);
+    transition: 0.4s;
+    color: white;
+}
+
+#menu li:hover {
+    background-color: var(--cor1);
+    color: rgba(0, 0, 0, 0.4);
+}
+
+
+#btnMenu:hover #menu {
+    display: block;
+}
+
+/* Buscador */
+
+#divBusca {
+    background-color: var(--cor1);
+    border: none;
+    border-radius: 25px;
+    width: 300px;
+    height: 48px;
+    display: flex;
+    display: flex;
+    align-items: center;
+    transition: 0.5s;
+}
+
+#btnBusca {
+    max-width: 100%;
+    margin-right: 10px;
+}
+
+#txtBusca:focus {
+    box-shadow: 0 0 0 0;
+    border: none;
+    outline: 0;
+    padding: 0 15px;
+    background-color: transparent;
+}
+
+#txtBusca {
+    float: left;
+    background-color: transparent;
+    margin-left: 5px;
+    font-style: italic;
+    font-size: 18px;
+    border: none;
+    width: 260px;
+    color: aliceblue;
+    border-radius: 5px 0 0 5px;
+    left: -500px;
+}
+
+/* AUTOFILL BUSCA */
+#txtBusca:-webkit-autofill,
+#txtBusca:-webkit-autofill:hover,
+#txtBusca:-webkit-autofill:focus,
+#txtBusca:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px var(--cor1) inset !important;
+    -webkit-text-fill-color: white;
+    -webkit-text-size-adjust: 100%;
+}
+
+#txtBusca:placeholder-shown {
+    margin-left: 5px;
+}
+
+#buscadorLine {
+    width: 240px;
+    border-bottom: solid 2px white;
+    position: absolute;
+    top: 60px;
+    right: 120px;
+}
+
+#buscarIcon {
+    max-width: 32px;
+}
+
+.divIcon {
+    border-radius: 100%;
+    width: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin: 0 10px;
+}
+
+.divIcon:hover {
+    background-color: var(--cor1);
+}
+
+input,
+select,
+input:focus,
+select:focus,
+option,
+option:focus {
+    box-shadow: 0 0 0 0;
+    border: none;
+    outline: 0;
+    background-color: transparent;
+}
+
+/* MAIN */
+
+main {
+    width: 100%;
+    margin: 20px auto 10px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    /* padding: 20px; */
+}
+
+h1 {
+    margin: 10px 0 0 10px;
+    font-family: var(--fonte-titulo);
+    font-size: 3em;
+    color: var(--cor4);
+}
+
+/* CARDS */
+
+div.card {
+    background-color: var(--cor3);
+    width: 200px;
+    border-radius: 20px;
+    height: 350px;
+    margin: 10px;
+}
+
+div.card:hover {
+    background-color: #2B5CF0;
+    transition: 0.5s;
+}
+
+div.card:hover .imgCapa img {
+    filter: brightness(40%);
+    transition: 0.5s;
+}
+
+div.card h1 {
+    color: white;
+    font-family: var(--fonte-titulo);
+    font-size: 1.6em;
+    margin: -30px 10px 0px 10px;
+    white-space: break-space;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2 !important;
+    -webkit-box-orient: vertical;
+}
+
+abbr {
+    text-decoration: none;
+    cursor: default;
+}
+
+
+.imgCapa {
+    border-radius: 20px 20px 0 0;
+    overflow: hidden;
+}
+
+.imgCapa img {
+    width: 100%;
+    margin: 0 0 10px 0;
+}
+
+.botoes {
+    margin-left: 10px;
+    margin-bottom: 3px;
+    width: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.tituloBotoes {
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    justify-content: space-around;
+}
+
+.enviar,
+.curtir {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 7px;
+    border-radius: 50%;
+}
+
+.curtir:hover,
+.enviar:hover {
+    background-color: #6792ad;
+}
+
+/* MODAL ENVIAL */
+
+#fundoOpaco {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    transition: 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#modal {
+    width: 100%;
+    max-width: 400px;
+    height: 300px;
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+}
+
+#botaoFechar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    width: 15px;
+    height: 15px;
+    cursor: default;
+    margin-left: 355px;
+    border-radius: 50%;
+}
+
+#botaoFechar:hover {
+    background-color: rgba(212, 212, 212, 0.6);
+}
+
+#modal h1 {
+    position: relative;
+    top: -40px;
+    margin-left: 10px;
+    width: fit-content;
+}
+
+#inputModal {
+    margin: 10px auto;
+    width: 370px;
+    height: 40px;
+    font-size: larger;
+    font-weight: 600;
+    color: var(--cor6);
+    font-family: var(--fonte-padrao);
+    background-color: rgba(219, 219, 219, 0.7);
+    border-radius: 5px;
+    padding-left: 10px;
+}
+
+#modal label {
+    margin-left: 10px;
+}
+
+#modal hr {
+    width: 375px;
+    border: solid 2px var(--cor1);
+    margin: 0;
+    position: relative;
+    bottom: 12px;
+}
+
+#botaoModal {
+    width: 100px;
+    height: 40px;
+    background-color: var(--cor2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 55px auto 0px auto;
+    font-weight: bold;
+    color: white;
+    border-radius: 10px;
+}
+
+#botaoModal:hover {
+    background-color: var(--cor1);
+}
+
+/* Footer */
+
+footer {
+    color: white;
+    background-color: var(--cor2);
+    display: inline-flex;
+    width: 100%;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    bottom: 0px;
+    margin-top: 10px;
+    font-size: 2em;
+    font-family: var(--fonte-titulo);
+}

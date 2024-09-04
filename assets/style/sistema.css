@@ -1,0 +1,362 @@
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    /* --cor1: #6B614A;
+    --cor2: #EBD090;
+    --cor3: #8FC8EB;
+    --cor4: #4A4A6B;
+    --cor5: #908FEB;
+    --cor6: #4A5F6B; */
+    --cor1: #2B5CF0;
+    --cor2: #3B9EEB;
+    --cor3: #3BD6EB;
+    --cor4: #81DEEB;
+    --cor5: #3BEB89;
+    --cor6: #3BEBC4;
+    --fonte-padrao: Arial, Helvetica, sans-serif;
+    --fonte-titulo: "Concert One", sans-serif;
+}
+
+body {
+    font-family: var(--fonte-padrao);
+    background-color: rgba(172, 172, 172, 0.3);
+}
+
+header {
+    background-color: var(--cor2);
+    width: calc(100% - 150px);
+    margin-left: 150px;
+    height: 50px;
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* box-shadow: 4px 1px 10px 1px rgba(0, 0, 0, 0.300); */
+}
+
+header #imgLogo {
+    width: 250px;
+    position: relative;
+    left: 35px;
+}
+
+/* #icones {
+    display: flex;
+    width: 32px;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 5px;
+    position: absolute;
+    right: 52px;
+}
+
+#icones img {
+    width: 100%;
+} */
+
+#divBusca {
+    background-color: #E8F0FE;
+    border: none;
+    border-radius: 25px;
+    width: 300px;
+    height: 48px;
+    display: flex;
+    display: flex;
+    align-items: center;
+    transition: 0.5s;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+#btnBusca {
+    max-width: 100%;
+    margin-right: 10px;
+}
+
+#txtBusca:focus {
+    box-shadow: 0 0 0 0;
+    border: none;
+    outline: 0;
+    padding: 0 15px;
+    background-color: transparent;
+}
+
+#txtBusca {
+    float: left;
+    background-color: transparent;
+    padding-left: 5px;
+    font-style: italic;
+    font-size: 18px;
+    border: none;
+    width: 260px;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+#txtBusca:-webkit-autofill,
+#txtBusca:-webkit-autofill:hover, 
+#txtBusca:-webkit-autofill:focus, 
+#txtBusca:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 30px #E8F0FE inset !important;
+    -webkit-text-fill-color: rgba(0, 0, 0, 0.7) !important;
+    -webkit-text-size-adjust: 100% !important;
+    -webkit-margin-start: 5px;
+}
+
+
+#buscadorLine {
+    width: 240px;
+    border-bottom: solid 2px #3BD6EB;
+    position: absolute;
+    top: 35px;
+    right: 45px;
+}
+
+#txtBusca:placeholder-shown {
+    margin-left: 5px;
+}
+
+#buscarIcon {
+    max-width: 32px;
+}
+
+.divIcon {
+    border-radius: 100%;
+    width: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    margin: 0 10px;
+}
+
+.divIcon:hover {
+    background-color: var(--cor1);
+}
+
+#btnBusca:hover {
+    background-color: var(--cor1);
+}
+
+input,
+select,
+input:focus,
+select:focus,
+option,
+option:focus {
+    box-shadow: 0 0 0 0;
+    border: none;
+    outline: 0;
+}
+
+.divIcon:hover {
+    background-color: var(--cor1);
+    transition: 0.4s;
+}
+
+/* Nav & menu*/
+
+nav {
+    list-style: none;
+    height: calc(100vh - 50px);
+    width: 150px;
+    background-color: var(--cor2);
+    color: white;
+    font-weight: bold;
+    /* box-shadow: 4px 1px 10px 1px rgba(0, 0, 0, 0.300); */
+}
+
+nav li,
+#vizualizar,
+#editar,
+#adicionar,
+#deletar,
+.menuPrincipal {
+    padding: 10px;
+    border-bottom: solid 1px var(--cor4);
+}
+
+nav li#vizualizar {
+    border-top: solid 1px var(--cor4);
+}
+
+nav li:hover,
+#vizualizar:hover,
+#editar:hover,
+#adicionar:hover,
+#deletar:hover,
+.menuPrincipal:hover {
+    color: rgb(173, 173, 173);
+    cursor: default;
+    background-color: var(--cor1);
+}
+
+nav input {
+    display: none;
+}
+
+/* conteudo */
+
+main {
+    position: absolute;
+    width: 40%;
+    margin: 20px 0 10px 20px;
+    top: 60px;
+    left: 150px;
+    /* box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.300); */
+    height: 450px;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: white;
+    overflow: auto;
+}
+
+main #imglogo {
+    width: 50%;
+}
+
+#imgmain {
+    margin: auto;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* BARRA DE ROLAGEM MAIN */
+
+main::-webkit-scrollbar {
+    width: 12px;
+    /* width of the entire scrollbar */
+}
+
+main::-webkit-scrollbar-track {
+    background: rgba(63, 63, 63, 0.315);
+    border-radius: 20px;
+    /* color of the tracking area */
+}
+
+main::-webkit-scrollbar-thumb {
+    background-color: #cccccc;
+    /* color of the scroll thumb */
+    border-radius: 20px;
+    /* roundness of the scroll thumb */
+    border: 3px solid #cccccc;
+    /* creates padding around scroll thumb */
+}
+
+/* Area de formularios */
+
+#formArea {
+    position: absolute;
+    width: 40%;
+    margin: 20px 0 10px 20px;
+    top: 60px;
+    right: 0px;
+    /* box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.300); */
+    height: fit-content;
+    max-height: calc(100vh -80px);
+    border-radius: 10px 0 0 10px;
+    padding: 10px;
+    background-color: white;
+    display: none;
+}
+
+#forms {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+}
+
+#formArea h1 {
+    text-align: center;
+    font-size: 2em;
+}
+
+#forms input {
+    margin-top: 0px;
+    margin-bottom: 15px;
+    border: none;
+    background-color: #E8F0FE;
+    height: 25px;
+    border-bottom: solid 2px var(--cor4);
+    border-radius: 5px;
+    width: 100%;
+    padding-left: 5px;
+    font-weight: 550;
+    font-size: larger;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+#forms input:focus {
+    box-shadow: 0 0 0 0;
+    border: none;
+    outline: 0;
+}
+
+#botao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    background-color: var(--cor2);
+    height: 45px;
+    width: 120px;
+    border-radius: 5px;
+    font-weight: bolder;
+    font-size: larger;
+    color: white;
+}
+
+#botao:hover {
+    color: rgb(173, 173, 173);
+    cursor: default;
+    background-color: var(--cor1);
+}
+
+#inputID {
+    display: none;
+}
+
+/* Card Livros */
+
+.cardLivros {
+    background-color: white;
+    margin: 10px 0;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.cardLivros h2 {
+    display: none;
+}
+
+.cardLivros:hover {
+    background-color: var(--cor1);
+    color: white;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+/* Footer */
+
+footer {
+    color: white;
+    background-color: var(--cor2);
+    display: inline-flex;
+    width: calc(100% - 150px);
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0px;
+    margin-top: 10px;
+    margin-left: 150px;
+    font-family: var(--fonte-titulo);
+    font-size: large;
+    font-weight: 500;
+    /* box-shadow: 17px 0px 20px 0px rgba(0, 0, 0, 0.300); */
+}
